@@ -15,7 +15,7 @@ spec:
         path: /var/run/docker.sock
   containers:
   - name: glams-jenkins-slave
-    image: anandsadhu/myapp:latest
+    image: alekhya277/sampleapp:latest
     imagePullPolicy: Always
     command:
     - cat
