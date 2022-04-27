@@ -32,7 +32,7 @@ spec:
     stages {
         stage('docker build') {
             steps {
-                sh 'echo hostname'
+                sh 'docker build -t alekhya277/sampleapp:latest .'
             }
         }
     }
