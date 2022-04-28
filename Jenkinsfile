@@ -46,5 +46,15 @@ spec:
                 sh 'docker build -t alekhya277/sampleapp:latest .'
             }
         }
+        stage('docker login') {
+       steps {
+            sh 'docker login -u alekhya277 -p Perigord!22'
+        }
+    }
+    stage('docker push') {
+        steps {
+            sh 'docker push alekhya277/sampleapp'
+           }
+    }
     }
 }
