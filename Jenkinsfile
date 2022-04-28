@@ -16,11 +16,22 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: jenkins/slave
+    image: registry.glams.com/glams/jenkins-agent:latest
     command:
     - sleep
     args:
     - infinity
+    tty: true
+    resources:
+      requests:
+        memory: "2Gi"
+    volumeMounts:
+     - name: docker-sock
+       mountPath: /var/run/docker.sock
+  volumes:
+    - name: docker-sock
+      hostPath:
+        path: /var/run/docker.sock
 '''
             // Can also wrap individual steps:
             // container('shell') {
