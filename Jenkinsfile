@@ -56,5 +56,10 @@ spec:
             sh 'docker push alekhya277/sampleapp'
            }
     }
+        stage('deploy') {
+            steps {
+                sh 'kubectl apply -f Deployment.yaml'
+            }
+        }
     }
 }
