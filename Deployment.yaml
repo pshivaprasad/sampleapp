@@ -17,7 +17,7 @@ spec:
         image: alekhya277/sampleapp
         ports:
         - containerPort: 80
- ---
+---
 apiVersion: v1
 kind: Service
 metadata:
