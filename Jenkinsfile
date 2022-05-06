@@ -16,7 +16,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: alekhya277/sampleapp:latest
+    image: anandsadhu/dotnet-jenkins-slave
     command:
     - sleep
     args:
