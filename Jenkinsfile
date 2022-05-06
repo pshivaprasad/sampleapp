@@ -43,7 +43,7 @@ spec:
     stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t alekhya277/sampleapp:latest .'
+                sh 'docker build -t pshivaprasadymailcom/sampleapp:latest .'
             }
         }
         stage('docker login') {
