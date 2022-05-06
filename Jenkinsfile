@@ -16,7 +16,7 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: registry.glams.com/glams/jenkins-agent:latest
+    image: alekhya277/sampleapp:latest
     command:
     - sleep
     args:
@@ -48,12 +48,12 @@ spec:
         }
         stage('docker login') {
        steps {
-            sh 'docker login -u alekhya277 -p Perigord!22'
+            sh 'docker login -u pshivaprasadymailcom -p vijayalaxmi@1'
         }
     }
     stage('docker push') {
         steps {
-            sh 'docker push alekhya277/sampleapp'
+            sh 'docker push pshivaprasadymailcom/sampleapp'
            }
     }
         stage('deploy') {
