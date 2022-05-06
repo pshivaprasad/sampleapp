@@ -43,17 +43,17 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t sainikhil1999/demoapp .'
+                sh 'docker build -t pshivaprasadymailcom/sampleapp:latest .'
        }
     }
    stage('docker login') {
        steps {
-            sh 'docker login -u sainikhil1999 -p Akhil@1999'
+            sh 'docker login -u pshivaprasadymailcom -p vijayalaxmi@1'
         }
     }
     stage('docker push') {
         steps {
-            sh 'docker push sainikhil1999/demoapp'
+            sh 'docker push pshivaprasadymailcom/sampleapp'
            }
     }
      stage("install helm"){
