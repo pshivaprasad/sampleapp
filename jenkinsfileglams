@@ -43,32 +43,24 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t pshivaprasadymailcom/sampleapp .'
+                sh 'docker build -t pshivaprasadymailcom/glamsnew .'
+                sh 'docker login -u pshivaprasadymailcom -p vijayalaxmi@1'
+                sh 'docker push pshivaprasadymailcom/glamsnew'
        }
-    }
-   stage('docker login') {
-       steps {
-            sh 'docker login -u pshivaprasadymailcom -p vijayalaxmi@1'
-        }
-    }
-    stage('docker push') {
-        steps {
-            sh 'docker push pshivaprasadymailcom/sampleapp'
-           }
     }
      stage("install helm"){
        steps {
-         sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
-         sh 'ls -a'
-         sh 'tar -xvzf helm-v3.6.1-linux-amd64.tar.gz'
-         sh 'cp linux-amd64/helm /usr/bin'
-         sh 'helm version'
+         sh 'curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3'
+         sh 'chmod 700 get_helm.sh'
+         sh './get_helm.sh'
            }
         }
        stage('helm') {
            steps {
                sh 'helm version'
-               sh 'helm upgrade --install myapp glams1'
+               sh 'helm upgrade --install perigord-glams glams1'
+ 
+             
            }
        }
      }
