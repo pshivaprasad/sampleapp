@@ -68,7 +68,7 @@ spec:
        stage('helm') {
            steps {
                sh 'rm -f *.tgz'
-               sh 'helm upgrade --install dotnet glams1 -f glams1/values.yaml'
+               sh 'helm upgrade --install mydotnet -f glams1/values.yaml'
            }
        }
      }
