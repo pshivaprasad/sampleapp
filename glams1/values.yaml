@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: pshivaprasadymailcom/sampleapp
+  repository: pshivaprasadymailcom/glamsnew
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart version.
   tag: "latest"
