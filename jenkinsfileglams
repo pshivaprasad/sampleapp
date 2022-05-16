@@ -67,7 +67,7 @@ spec:
         }
        stage('helm') {
            steps {
-               sh 'rm -f *.tgz'
+               sh 'helm version'
                sh 'helm upgrade --install myapp glams1'
            }
        }
