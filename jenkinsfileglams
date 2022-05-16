@@ -68,7 +68,7 @@ spec:
        stage('helm') {
            steps {
                sh 'rm -f *.tgz'
-               sh 'helm upgrade --install dotnet1 glams1'
+               sh 'helm upgrade --install dotnet glams1'
            }
        }
      }
