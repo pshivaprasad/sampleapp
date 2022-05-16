@@ -68,7 +68,7 @@ spec:
        stage('helm') {
            steps {
                sh 'rm -f *.tgz'
-               sh 'helm upgrade --install SHIVA glams1'
+               sh 'helm upgrade --install myapp glams1'
            }
        }
      }
