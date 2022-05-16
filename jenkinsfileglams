@@ -43,7 +43,7 @@ spec:
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t pshivaprasadymailcom/sampleapp:latest .'
+                sh 'docker build -t pshivaprasadymailcom/sampleapp .'
        }
     }
    stage('docker login') {
@@ -68,7 +68,7 @@ spec:
        stage('helm') {
            steps {
                sh 'rm -f *.tgz'
-               sh 'helm upgrade --install mydotnet glams1'
+               sh 'helm upgrade --install mydotnet glams glams1'
            }
        }
      }
